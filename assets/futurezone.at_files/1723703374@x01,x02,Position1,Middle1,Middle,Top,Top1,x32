@@ -1,0 +1,61 @@
+function OAS_RICH(position) {
+if (position == 'x01') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/1954294270/x01/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/1954294270/x01/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'x02') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/962358224/x02/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/962358224/x02/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'Position1') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/873439124/Position1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/873439124/Position1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'Middle1') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/1177406837/Middle1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/1177406837/Middle1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'Middle') {
+document.write ('<div style="display:none;">\n');
+document.write ('<script language="JavaScript" src="http://wa.kurier.at/RealMedia/ads/cap.cgi/833229101/?c=OasDefault/TK002889_A1fuzo_lad02_fuzo&dv=1&e=&s=1"></script>\n');
+document.write ('<img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/L32/833229101/Middle/OasDefault/TK002889_A1fuzo_lad02_fuzo/mha1136_futurezone_eju_Top_tag.html/5547776a646b324364353841446f364f?_RM_EMPTY_&" alt="Z?hlpixel f?r Online-Werbung." Width="1" Height="1" Border="0" />\n');
+document.write ('</div>\n');
+document.write ('<script language="JavaScript">\n');
+document.write ('var aspage = "mha1136/futurezone_wp";\n');
+document.write ('var asposition = "Top";\n');
+document.write ('var time = new Date();\n');
+document.write ('randnum = (time.getTime());\n');
+document.write ('document.write(');
+document.write ("'");
+document.write ('<scr');
+document.write ("'");
+document.write ('+');
+document.write ("'");
+document.write ('ipt language="JavaScript" src="http://austria1.adverserve.net/RealMedia/ads/adstream_jx.ads/');
+document.write ("'");
+document.write ('+aspage+');
+document.write ("'");
+document.write ('/1');
+document.write ("'");
+document.write ('+randnum+');
+document.write ("'");
+document.write ('@');
+document.write ("'");
+document.write ('+asposition+');
+document.write ("'");
+document.write ('"><\\');
+document.write ('/scr');
+document.write ("'");
+document.write ('+');
+document.write ("'");
+document.write ('ipt>');
+document.write ("'");
+document.write (');\n');
+document.write ('</script>\n');
+}
+if (position == 'Top') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/1312663690/Top/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/1312663690/Top/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'Top1') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/607193688/Top1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/default/empty.gif"  WIDTH=1 HEIGHT=1 alt="" BORDER=0 border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/607193688/Top1/OasDefault/default/empty.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+if (position == 'x32') {
+document.write ('<a href="http://wa.kurier.at/RealMedia/ads/click_lx.ads/frontpage.futurezone.at/homepage/L23/1990736008/x32/OasDefault/UUcount_futurezoneat/adw1x1.gif/5547776a646b324364353841446f364f?" target="_blank"><img src="http://wa.kurier.at/RealMedia/ads/Creatives/OasDefault/UUcount_futurezoneat/adw1x1.gif"  alt=""  border="0" /></a><div style="position:absolute;top:-10px;z-index:500"><img src="http://wa.kurier.at/RealMedia/ads/adstream_lx.ads/frontpage.futurezone.at/homepage/L23/1990736008/x32/OasDefault/UUcount_futurezoneat/adw1x1.gif/5547776a646b324364353841446f364f?_RM_EMPTY_&" width="1" height="1" border="0" /></div>');
+}
+}
