@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'benchmark_app/base.html' %}
 {% block extra_head %}
 <link href="{{MEDIA_URL}}/futurezone.at_files/style.css" media="screen" rel="stylesheet" type="text/css">
 <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
@@ -139,14 +139,14 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 
 
 {% block main_content %}
-<div id="container">	
-		<a id="futurezone" href="{{MEDIA_URL}}futurezone.at_files/futurezone.at.html">futurezone.at</a> 
-		
+<div id="container">
+		<a id="futurezone" href="{{MEDIA_URL}}futurezone.at_files/futurezone.at.html">futurezone.at</a>
+
 		<form class="search" action="http://futurezone.at/suche" method="post">
 			<input type="text" onclick="clearField(this)" name="search" value="Suchen nach">
 			<input type="submit" value="Start">
 		</form>
-		
+
 		<ul class="personal">
 			<li><a href="https://community.futurezone.at/">Newsletter</a></li>
 			<li><a href="https://community.futurezone.at/">Meine Daten</a></li>
@@ -160,9 +160,9 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 	<li class="digitallife"><a href="http://futurezone.at/digitallife/">Digital Life</a></li>
 	<li class="future"><a href="http://futurezone.at/future/">Future</a></li>
 	<li class="meinung"><a href="http://futurezone.at/meinung/">Meinung</a></li>
-</ul>		
+</ul>
 <!-- Ende Navigation -->
-		
+
 		<!-- Topbar (newest posts, filter,...) -->
 		<div class="topbar bgfrontpage">
 	<ul class="filter">
@@ -176,40 +176,40 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 			<li><a href="http://futurezone.at/tag/38-wikileaks.php">WikiLeaks</a>,</li>
 			<li><a href="http://futurezone.at/tag/119-mobilfunk.php">Mobilfunk</a></li>
 	</ul>
-	
+
 		<div class="information">
 		<a href="http://futurezone.at/rss.xml" class="rss">RSS Feed</a>
 	</div>
-		
+
 			<ul class="topposts">
-	
+
 			<li class="bigpost future">
 						<a href="http://futurezone.at/future/2270-elefant-und-moewe-inspirieren-konstrukteure.php"><img src="{{MEDIA_URL}}futurezone.at_files/1469_fz5.jpg" alt="Bionic Handling Assistent Elefant II" title="Credit: Festo" width="550" height="274"></a>
 				<a href="http://futurezone.at/future/" class="ressort colorfuture">Future</a>
 		<a href="http://futurezone.at/future/2270-elefant-und-moewe-inspirieren-konstrukteure.php#userkommentare" class="comments commentCount-fz2270">1</a>
 		<h1><a href="http://futurezone.at/future/2270-elefant-und-moewe-inspirieren-konstrukteure.php">Elefant und Möwe inspirieren Konstrukteure</a></h1>
 	</li>
-	
+
 			<li class="smallpost first fullressort bgdigitallife">
 						<a href="http://futurezone.at/digitallife/" class="ressort colordigitallife">Digital Life</a>
 		<a href="http://futurezone.at/digitallife/2294-handyrechnung-ueber-25-000-euro-erlassen.php#userkommentare" class="comments commentCount-fz2294">1</a>
 		<h2><a href="http://futurezone.at/digitallife/2294-handyrechnung-ueber-25-000-euro-erlassen.php">Handy-Rechnung über 25.000 Euro erlassen</a></h2>
 	</li>
-	
+
 				<li class="smallpost second digitallife">
 							<a href="http://futurezone.at/digitallife/2263-die-digitale-renaissance-des-groschenromans.php"><img src="{{MEDIA_URL}}futurezone.at_files/1459_fz2.jpg" alt="Kindle" title="Credit: AP" width="170" height="95"></a>
 				<a href="http://futurezone.at/digitallife/" class="ressort colordigitallife">Digital Life</a>
 		<a href="http://futurezone.at/digitallife/2263-die-digitale-renaissance-des-groschenromans.php#userkommentare" class="comments commentCount-fz2263">1</a>
 		<h2><a href="http://futurezone.at/digitallife/2263-die-digitale-renaissance-des-groschenromans.php">Die digitale Renaissance des Groschenromans</a></h2>
 	</li>
-		
+
 			<li class="smallpost third future">
 							<a href="http://futurezone.at/future/2269-turing-preistraeger-ed-clarke-im-interview.php"><img src="{{MEDIA_URL}}futurezone.at_files/1467_fz2.jpg" alt="" title="Credit: Ferrigato/IST Austria" width="170" height="95"></a>
 				<a href="http://futurezone.at/future/" class="ressort colorfuture">Future</a>
 		<a href="http://futurezone.at/future/2269-turing-preistraeger-ed-clarke-im-interview.php#userkommentare" class="comments commentCount-fz2269"></a>
 		<h2><a href="http://futurezone.at/future/2269-turing-preistraeger-ed-clarke-im-interview.php">Turing-Preisträger Ed Clarke im Interview</a></h2>
 	</li>
-	
+
 				<li class="smallpost fourth fullressort bgb2b">
 						<a href="http://futurezone.at/b2b/" class="ressort colorb2b">B2B</a>
 		<a href="http://futurezone.at/b2b/2284-facebook-gruender-steigt-bei-jumio-ein.php#userkommentare" class="comments commentCount-fz2284">5</a>
@@ -221,226 +221,226 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 		<!-- Content -->
 		<div id="content">
 			<ul class="postlist">
-	
+
 <li class="digitallife">
 	<span class="ressort"><a href="http://futurezone.at/digitallife/">Digital Life</a>, <a href="http://futurezone.at/digitallife/2293-new-york-times-im-netz-wieder-kostenpflichtig.php">Medien</a></span>
 	<a href="http://futurezone.at/digitallife/2293-new-york-times-im-netz-wieder-kostenpflichtig.php#userkommentare" class="comments commentCount-fz2293"></a>
-	
+
 	<h2><a href="http://futurezone.at/digitallife/2293-new-york-times-im-netz-wieder-kostenpflichtig.php">New York Times im Netz wieder kostenpflichtig</a></h2>
-	
-		
+
+
 			<p>Ab 28. März werden Leser zur Kasse gebeten. 20 Artikel pro Monat können weiterhin gratis gelesen werden.<a href="http://futurezone.at/digitallife/2293-new-york-times-im-netz-wieder-kostenpflichtig.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 		<!-- OAS AD beginn Sitelink 1 -->
 <a href="http://wa.kurier.at/RealMedia/ads/click_nx.ads/frontpage.futurezone.at/homepage/1723703374@x01,x02,Position1,Middle1,Middle,Top,Top1,x32!x01?" target="_top"></a>
 <!-- OAS AD end Sitelink 1 -->
 
-		
-			
+
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2291-investor-bei-jowood-abgesprungen.php">Turbulenzen</a></span>
 	<a href="http://futurezone.at/b2b/2291-investor-bei-jowood-abgesprungen.php#userkommentare" class="comments commentCount-fz2291"></a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2291-investor-bei-jowood-abgesprungen.php">Investor bei JoWood abgesprungen</a></h2>
-	
-		
+
+
 			<p>Die Zukunft des österreichischen Spieleunternehmens JoWooD, das im Jänner in die Insolvenz geschlittert ist, ist weiter ungewiss. <a href="http://futurezone.at/b2b/2291-investor-bei-jowood-abgesprungen.php" class="more">weiterlesen</a></p>
 	</li>
-				
+
 		<!-- OAS AD beginn Sitelink 2 -->
 <a href="http://wa.kurier.at/RealMedia/ads/click_nx.ads/frontpage.futurezone.at/homepage/1723703374@x01,x02,Position1,Middle1,Middle,Top,Top1,x32!x02?" target="_top"></a>
 <!-- OAS AD end Sitelink 2 -->
 
-		
-		
+
+
 <li class="netzpolitik">
 	<span class="ressort"><a href="http://futurezone.at/netzpolitik/">Netzpolitik</a>, <a href="http://futurezone.at/netzpolitik/2289-eu-kommissarin-gegen-facebook-amp-co.php">Datenschutz</a></span>
 	<a href="http://futurezone.at/netzpolitik/2289-eu-kommissarin-gegen-facebook-amp-co.php#userkommentare" class="comments commentCount-fz2289">1</a>
-	
+
 	<h2><a href="http://futurezone.at/netzpolitik/2289-eu-kommissarin-gegen-facebook-amp-co.php">EU-Kommissarin gegen Facebook &amp; Co. </a></h2>
-	
+
 			<a href="http://futurezone.at/netzpolitik/2289-eu-kommissarin-gegen-facebook-amp-co.php"><img src="{{MEDIA_URL}}futurezone.at_files/794_fz2.jpg" alt="EU-Justizkommissarin Viviane Reding" title="Credit: Bild: Reuters, Thierry Roge" width="170" height="95"></a>
-		
+
 			<p>Datenschutzstandards für europäische Bürger sollten unabhängig davon gelten, wo ihre Daten gespeichert und verarbeitet werden, sagte EU-Justizkommissarin Viviane Reding. Sie will künftig die Einhaltung von europäischen Datenschutzstandards auch von Unternehmen außerhalb der EU einfordern. <a href="http://futurezone.at/netzpolitik/2289-eu-kommissarin-gegen-facebook-amp-co.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="netzpolitik">
 	<span class="ressort"><a href="http://futurezone.at/netzpolitik/">Netzpolitik</a>, <a href="http://futurezone.at/netzpolitik/2288-kritik-an-transfer-von-eu-bankdaten.php">Swift-Abkommen</a></span>
 	<a href="http://futurezone.at/netzpolitik/2288-kritik-an-transfer-von-eu-bankdaten.php#userkommentare" class="comments commentCount-fz2288"></a>
-	
+
 	<h2><a href="http://futurezone.at/netzpolitik/2288-kritik-an-transfer-von-eu-bankdaten.php">Kritik an Transfer von EU-Bankdaten</a></h2>
-	
-		
+
+
 			<p>Der Transfer von Bankdaten europäischer Bürger in die USA sorgt erneut für Ärger. Europaabgeordnete halten die EU-Daten nicht für ausreichend geschützt und stellen die gängige Praxis in Frage. <a href="http://futurezone.at/netzpolitik/2288-kritik-an-transfer-von-eu-bankdaten.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2287-bundesrechenzentrum-setzt-auf-green-it.php">Umweltschutz</a></span>
 	<a href="http://futurezone.at/b2b/2287-bundesrechenzentrum-setzt-auf-green-it.php#userkommentare" class="comments commentCount-fz2287"></a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2287-bundesrechenzentrum-setzt-auf-green-it.php">Bundesrechenzentrum setzt auf Green IT</a></h2>
-	
-		
+
+
 			<p>Das BRZ erhielt die Wiener ÖkoBusinessPlan-Auszeichnung.<a href="http://futurezone.at/b2b/2287-bundesrechenzentrum-setzt-auf-green-it.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="produkte">
 	<span class="ressort"><a href="http://futurezone.at/produkte/">Produkte</a>, <a href="http://futurezone.at/produkte/2286-t-mobile-lockt-kunden-in-die-cloud.php">Mobilfunk</a></span>
 	<a href="http://futurezone.at/produkte/2286-t-mobile-lockt-kunden-in-die-cloud.php#userkommentare" class="comments commentCount-fz2286"></a>
-	
+
 	<h2><a href="http://futurezone.at/produkte/2286-t-mobile-lockt-kunden-in-die-cloud.php">T-Mobile lockt Kunden in die Cloud</a></h2>
-	
+
 			<a href="http://futurezone.at/produkte/2286-t-mobile-lockt-kunden-in-die-cloud.php"><img src="{{MEDIA_URL}}futurezone.at_files/1158_fz2.jpg" alt="T-Mobile Logo am Wiener Rennweg" title="Credit: Gerhard Deutsch/APA" width="170" height="95"></a>
-		
+
 			<p>Mit dem „Mediencenter“ können T-Mobile-Kunden in Zukunft ihre Daten auf zentralen Servern speichern und mittels Mobiltelefon, Computer oder Tablet darauf zugreifen. Ein Gigabyte ist gratis, mehr Speicherplatz wird in einer kostenpflichtigen Premium-Version angeboten werden.<a href="http://futurezone.at/produkte/2286-t-mobile-lockt-kunden-in-die-cloud.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="netzpolitik">
 	<span class="ressort"><a href="http://futurezone.at/netzpolitik/">Netzpolitik</a>, <a href="http://futurezone.at/netzpolitik/2285-usa-wollen-datenschutz-grundgesetz.php">"Bill of Rights"</a></span>
 	<a href="http://futurezone.at/netzpolitik/2285-usa-wollen-datenschutz-grundgesetz.php#userkommentare" class="comments commentCount-fz2285">1</a>
-	
+
 	<h2><a href="http://futurezone.at/netzpolitik/2285-usa-wollen-datenschutz-grundgesetz.php">USA wollen "Datenschutz-Grundgesetz"</a></h2>
-	
+
 			<a href="http://futurezone.at/netzpolitik/2285-usa-wollen-datenschutz-grundgesetz.php"><img src="{{MEDIA_URL}}futurezone.at_files/1373_fz2.jpg" alt="Mann vor Computer" title="Credit: AP" width="170" height="95"></a>
-		
+
 			<p>Die US-Regierung will ein „Datenschutz-Grundgesetz“. Internet-Nutzer in den USA sollen verhindern können, dass Unternehmen ihre Aktivitäten in Netz mit Tracking-Diensten verfolgen oder persönliche Daten verkaufen. <a href="http://futurezone.at/netzpolitik/2285-usa-wollen-datenschutz-grundgesetz.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2283-japan-lieferengpass-bei-handybildschirmen.php">Industrie</a></span>
 	<a href="http://futurezone.at/b2b/2283-japan-lieferengpass-bei-handybildschirmen.php#userkommentare" class="comments commentCount-fz2283"></a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2283-japan-lieferengpass-bei-handybildschirmen.php">Japan: Lieferengpass bei Handybildschirmen</a></h2>
-	
-		
+
+
 			<p>Toshiba und Hitachi halten die LCD-Montage nach Katastrophe teilweise an. Der chinesische Computerkonzern Lenovo befürchtet Lieferprobleme, weil ihm nach Werkschließungen von Sony wichtige Bauteile fehlen.<a href="http://futurezone.at/b2b/2283-japan-lieferengpass-bei-handybildschirmen.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="digitallife">
 	<span class="ressort"><a href="http://futurezone.at/digitallife/">Digital Life</a>, <a href="http://futurezone.at/digitallife/2280-sony-darf-paypal-konto-von-ps3-hacker-einsehen.php">Gericht</a></span>
 	<a href="http://futurezone.at/digitallife/2280-sony-darf-paypal-konto-von-ps3-hacker-einsehen.php#userkommentare" class="comments commentCount-fz2280"></a>
-	
+
 	<h2><a href="http://futurezone.at/digitallife/2280-sony-darf-paypal-konto-von-ps3-hacker-einsehen.php">Sony darf PayPal-Konto von PS3-Hacker einsehen</a></h2>
-	
-		
+
+
 			<p>Unternehmen will Prozess gegen George Hotz in San Francisco führen<a href="http://futurezone.at/digitallife/2280-sony-darf-paypal-konto-von-ps3-hacker-einsehen.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="netzpolitik">
 	<span class="ressort"><a href="http://futurezone.at/netzpolitik/">Netzpolitik</a>, <a href="http://futurezone.at/netzpolitik/2279-warnung-vor-zwei-klassen-internet.php">Netzneutralität</a></span>
 	<a href="http://futurezone.at/netzpolitik/2279-warnung-vor-zwei-klassen-internet.php#userkommentare" class="comments commentCount-fz2279"></a>
-	
+
 	<h2><a href="http://futurezone.at/netzpolitik/2279-warnung-vor-zwei-klassen-internet.php">Warnung vor Zwei-Klassen-Internet</a></h2>
-	
+
 			<a href="http://futurezone.at/netzpolitik/2279-warnung-vor-zwei-klassen-internet.php"><img src="{{MEDIA_URL}}futurezone.at_files/1485_fz2.jpg" alt="Tim Berners-Lee" title="Credit: J.J. Guillen, apa" width="170" height="95"></a>
-		
+
 			<p>Tim Berners-Lee, der Erfinder des World Wide Web, warnte bei einem runden Tisch in London zu Fragen der Netzneutralität vor einem Zwei-Klassen-Internet. Britische Internet- und Mobilfunkanbieter wollen sich zur Transparenz in Fragen des Verkehrsmanagements verpflichten. Konsumentenschützern ist das zu wenig. <a href="http://futurezone.at/netzpolitik/2279-warnung-vor-zwei-klassen-internet.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="netzpolitik">
 	<span class="ressort"><a href="http://futurezone.at/netzpolitik/">Netzpolitik</a></span>
 	<a href="http://futurezone.at/netzpolitik/2278-schweden-absage-an-vorratsdatenspeicherung.php#userkommentare" class="comments commentCount-fz2278"></a>
-	
+
 	<h2><a href="http://futurezone.at/netzpolitik/2278-schweden-absage-an-vorratsdatenspeicherung.php">Schweden: Absage an Vorratsdatenspeicherung</a></h2>
-	
+
 			<a href="http://futurezone.at/netzpolitik/2278-schweden-absage-an-vorratsdatenspeicherung.php"><img src="{{MEDIA_URL}}futurezone.at_files/1032_fz2.jpg" alt="" title="Credit: Bild: Mikko Pitkanen / Fotolia" width="170" height="95"></a>
-		
+
 			<p>Die schwedische Opposition sprach sich am Mittwoch gegen die Umsetzung der EU-Richtlinie zur Vorratsdatenspeicherung aus und brachte damit eine Regierungsvorlage zu Fall. Nun droht Schweden eine hohe EU-Strafe. <a href="http://futurezone.at/netzpolitik/2278-schweden-absage-an-vorratsdatenspeicherung.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="produkte">
 	<span class="ressort"><a href="http://futurezone.at/produkte/">Produkte</a>, <a href="http://futurezone.at/produkte/2276-ie9-2-35-millionen-downloads-in-24-stunden.php">Release</a></span>
 	<a href="http://futurezone.at/produkte/2276-ie9-2-35-millionen-downloads-in-24-stunden.php#userkommentare" class="comments commentCount-fz2276">5</a>
-	
+
 	<h2><a href="http://futurezone.at/produkte/2276-ie9-2-35-millionen-downloads-in-24-stunden.php">IE9: 2,35 Millionen Downloads in 24 Stunden</a></h2>
-	
-		
+
+
 			<p>Starke erste Zahlen für Microsofts Browser<a href="http://futurezone.at/produkte/2276-ie9-2-35-millionen-downloads-in-24-stunden.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2275-apple-analyst-zweifelt-an-wachstum.php">Spekulationen</a></span>
 	<a href="http://futurezone.at/b2b/2275-apple-analyst-zweifelt-an-wachstum.php#userkommentare" class="comments commentCount-fz2275">2</a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2275-apple-analyst-zweifelt-an-wachstum.php">Apple: Analyst zweifelt an Wachstum</a></h2>
-	
+
 			<a href="http://futurezone.at/b2b/2275-apple-analyst-zweifelt-an-wachstum.php"><img src="{{MEDIA_URL}}futurezone.at_files/1486_fz2.jpg" alt="Apple-Logo" title="Credit: Mike Segar/reuters" width="170" height="95"></a>
-		
+
 			<p>Der Analyst Alex Gauna von JMP Securities hegt Zweifel daran, dass der kalifornische Konzern das Wachstumstempo der vergangenen Jahre halten kann und bewertete das Papier nur noch als mittelmäßig gute Geldanlage. <a href="http://futurezone.at/b2b/2275-apple-analyst-zweifelt-an-wachstum.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2273-vz-netzwerke-vermarkten-myspace-werbung.php">Social Media </a></span>
 	<a href="http://futurezone.at/b2b/2273-vz-netzwerke-vermarkten-myspace-werbung.php#userkommentare" class="comments commentCount-fz2273">1</a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2273-vz-netzwerke-vermarkten-myspace-werbung.php">VZ-Netzwerke vermarkten MySpace-Werbung </a></h2>
-	
-		
+
+
 			<p>Das soziale Online-Netzwerk gibt die Werbevermarktung in Deutschland an die Holtzbrinck-Töchter und IQ Digital Media Marketing ab <a href="http://futurezone.at/b2b/2273-vz-netzwerke-vermarkten-myspace-werbung.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="digitallife">
 	<span class="ressort"><a href="http://futurezone.at/digitallife/">Digital Life</a>, <a href="http://futurezone.at/digitallife/2272-falscher-twitter-account-veraergert-atomforum.php">Japan</a></span>
 	<a href="http://futurezone.at/digitallife/2272-falscher-twitter-account-veraergert-atomforum.php#userkommentare" class="comments commentCount-fz2272">3</a>
-	
+
 	<h2><a href="http://futurezone.at/digitallife/2272-falscher-twitter-account-veraergert-atomforum.php">"Falscher" Twitter-Account verärgert Atomforum</a></h2>
-	
-		
+
+
 			<p>Nutzer verbreitet nach AKW-Unfall satirische Beiträge unter dem Namen des Lobbyverbandes im Internet <a href="http://futurezone.at/digitallife/2272-falscher-twitter-account-veraergert-atomforum.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2271-hp-will-schneller-wachsen-als-der-markt.php">Unternehmen </a></span>
 	<a href="http://futurezone.at/b2b/2271-hp-will-schneller-wachsen-als-der-markt.php#userkommentare" class="comments commentCount-fz2271">1</a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2271-hp-will-schneller-wachsen-als-der-markt.php">HP will schneller wachsen als der Markt</a></h2>
-	
-		
+
+
 			<p>US-Unternehmen sieht sich auf Augenhöhe mit IBM<a href="http://futurezone.at/b2b/2271-hp-will-schneller-wachsen-als-der-markt.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="b2b">
 	<span class="ressort"><a href="http://futurezone.at/b2b/">B2B</a>, <a href="http://futurezone.at/b2b/2268-neue-regeln-fuer-ebay-verkaeufer.php">Onlinehandel</a></span>
 	<a href="http://futurezone.at/b2b/2268-neue-regeln-fuer-ebay-verkaeufer.php#userkommentare" class="comments commentCount-fz2268"></a>
-	
+
 	<h2><a href="http://futurezone.at/b2b/2268-neue-regeln-fuer-ebay-verkaeufer.php">Neue Regeln für eBay-Verkäufer</a></h2>
-	
+
 			<a href="http://futurezone.at/b2b/2268-neue-regeln-fuer-ebay-verkaeufer.php"><img src="{{MEDIA_URL}}futurezone.at_files/1477_fz2.jpg" alt="eBay" title="Credit: Reuters" width="170" height="95"></a>
-		
+
 			<p>Ab Mai führt die Auktionsplattform einige Neuerungen für gewerbliche Händler ein. Im Mittelpunkt steht eine strukturierte Angebotsbeschreibung. Identische Angebote werden untersagt. <a href="http://futurezone.at/b2b/2268-neue-regeln-fuer-ebay-verkaeufer.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="produkte">
 	<span class="ressort"><a href="http://futurezone.at/produkte/">Produkte</a>, <a href="http://futurezone.at/produkte/2253-neue-browser-blockade-gegen-spionage-tools.php">Datenschutz</a></span>
 	<a href="http://futurezone.at/produkte/2253-neue-browser-blockade-gegen-spionage-tools.php#userkommentare" class="comments commentCount-fz2253"></a>
-	
+
 	<h2><a href="http://futurezone.at/produkte/2253-neue-browser-blockade-gegen-spionage-tools.php">Neue Browser: Blockade gegen Spionage-Tools</a></h2>
-	
+
 			<a href="http://futurezone.at/produkte/2253-neue-browser-blockade-gegen-spionage-tools.php"><img src="{{MEDIA_URL}}futurezone.at_files/1466_fz2.jpg" alt="Überwachung" title="Credit: istockphoto" width="170" height="95"></a>
-		
+
 			<p>Im Gegensatz zur Konkurrenz setzt Microsoft auf zwei Methoden, um Nutzer vor Überwachung zu schützen. Neben einem Do-not-Track-Header kommen Sperrlisten zum Einsatz, die spionierende Werkzeuge blocken. In Österreich wird der VKI eine lokale Filterliste anbieten, die Privatssphäre sichern soll.<a href="http://futurezone.at/produkte/2253-neue-browser-blockade-gegen-spionage-tools.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="digitallife">
 	<span class="ressort"><a href="http://futurezone.at/digitallife/">Digital Life</a>, <a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php">Mobilfunk</a></span>
 	<a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php#userkommentare" class="comments commentCount-fz2267">22</a>
-	
+
 	<h2><a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php">Vorarlberg: Handyrechnung über 25.000 Euro</a></h2>
-	
+
 			<a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php"><img src="{{MEDIA_URL}}futurezone.at_files/111_fz2.jpg" alt="Handy Geld " title="Credit: Fotolia" width="170" height="95"></a>
-		
+
 			<p>Ein Vorarlberger Skilehrer soll mit seinem Mobiltelefon fast acht Gigabyte an Daten verbraucht haben und dafür 25.000 Euro bezahlen. Er will mit dem Handy aber nur telefoniert haben und kann sich den Datenverbrauch nicht erklären. Die Arbeiterkammer (AK) fordert Schutzmaßnahmen gegen existenzbedrohende Kostenfallen. <a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php" class="more">weiterlesen</a></p>
 	</li>
-			
+
 <li class="digitallife last">
 	<span class="ressort"><a href="http://futurezone.at/digitallife/">Digital Life</a>, <a href="http://futurezone.at/digitallife/2264-fussball-in-3-d-hundskick-bleibt-hundskick.php">3-D-TV</a></span>
 	<a href="http://futurezone.at/digitallife/2264-fussball-in-3-d-hundskick-bleibt-hundskick.php#userkommentare" class="comments commentCount-fz2264"></a>
-	
+
 	<h2><a href="http://futurezone.at/digitallife/2264-fussball-in-3-d-hundskick-bleibt-hundskick.php">Fußball in 3-D: „Hundskick bleibt Hundskick“</a></h2>
-	
+
 			<a href="http://futurezone.at/digitallife/2264-fussball-in-3-d-hundskick-bleibt-hundskick.php"><img src="{{MEDIA_URL}}futurezone.at_files/1462_fz2.jpg" alt="Fußballspiel" title="Credit: dapd" width="170" height="95"></a>
-		
+
 			<p>Das Fußballspiel FC Bayern München gegen Inter Mailand wurde von Sky als erstes Champions League Spiel in der Geschichte mittels neuer 3-D-Technik live übertragen. Die futurezone hat sich die Übertragung mit österreichischen Fußball-Legenden wie Andreas Herzog, Heribert Weber und Peter Schöttel in einer Sportbar in Wien angeschaut. Die Fußballer zeigten sich von der Technik beeindruckt, das Wichtigste bleibe jedoch der Fußball.<a href="http://futurezone.at/digitallife/2264-fussball-in-3-d-hundskick-bleibt-hundskick.php" class="more">weiterlesen</a></p>
 	</li>
 		</ul>
@@ -456,7 +456,7 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 				<li><a href="http://futurezone.at/?page=3">3</a></li>
 				<li><a href="http://futurezone.at/?page=4">4</a></li>
 				<li><a href="http://futurezone.at/?page=5">5</a></li>
-	
+
 	<li>...</li>
 	<li><a href="http://futurezone.at/?page=9">9</a></li>
 	<li><a href="http://futurezone.at/?page=10">10</a></li>
@@ -467,7 +467,7 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 
 		</div>
 		<!-- Ende Content -->
-		
+
 		<!-- Sidebar -->
 		<div id="sidebar">
 				<h3>Meist gelesen</h3>
@@ -501,39 +501,39 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 
 <div class="outbox">
 	<h3><a href="http://futurezone.at/thema/136-schwerpunkt-start-ups.php">Schwerpunkt Start-ups</a></h3>
-	
+
 			<a href="http://futurezone.at/thema/136-schwerpunkt-start-ups.php"><img src="{{MEDIA_URL}}futurezone.at_files/1371_fz7.jpg" alt="Schwerpunkt Start-ups"></a>
-		
+
 			<div class="box">
 			<h2><a href="http://futurezone.at/thema/136-schwerpunkt-start-ups.php">Frische Web-Ideen, aufstrebende Online-Firmen und ambitionierte Gründer im Porträt</a></h2>
 		</div>
-		
+
 	<ul class="morelist">
 					<li><a href="http://futurezone.at/b2b/2284-facebook-gruender-steigt-bei-jumio-ein.php">Facebook-Gründer steigt bei Jumio ein</a></li>
 					<li><a href="http://futurezone.at/digitallife/2245-egoarchive-web-speicher-fuer-vergessliche.php">EgoArchive: Web-Speicher für Vergessliche</a></li>
 					<li><a href="http://futurezone.at/digitallife/2175-socialspiel-es-muss-gratis-und-im-browser-sein.php">SocialSpiel: "Es muss gratis und im Browser sein"</a></li>
 			</ul>
-	
+
 </div>	<h3>Meist kommentiert</h3>
 	<ul class="numbered">
 					<li class="digitallife">
 				<span>1.</span>
-								<a href="http://futurezone.at/digitallife/" class="ressort">Digital Life</a> <a class="link" href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php">Vorarlberg: Handyrechnung über 25.000 Euro</a> 
+								<a href="http://futurezone.at/digitallife/" class="ressort">Digital Life</a> <a class="link" href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php">Vorarlberg: Handyrechnung über 25.000 Euro</a>
 								<a href="http://futurezone.at/digitallife/2267-vorarlberg-handyrechnung-ueber-25-000-euro.php" class="comments">22</a>
 			</li>
 					<li class="produkte">
 				<span>2.</span>
-								<a href="http://futurezone.at/produkte/" class="ressort">Produkte</a> <a class="link" href="http://futurezone.at/produkte/2209-firefox-4-gehorcht-nur-dem-user.php">„Firefox 4 gehorcht nur dem User“</a> 
+								<a href="http://futurezone.at/produkte/" class="ressort">Produkte</a> <a class="link" href="http://futurezone.at/produkte/2209-firefox-4-gehorcht-nur-dem-user.php">„Firefox 4 gehorcht nur dem User“</a>
 								<a href="http://futurezone.at/produkte/2209-firefox-4-gehorcht-nur-dem-user.php" class="comments">18</a>
 			</li>
 					<li class="netzpolitik">
 				<span>3.</span>
-								<a href="http://futurezone.at/netzpolitik/" class="ressort">Netzpolitik</a> <a class="link" href="http://futurezone.at/netzpolitik/2224-atomkraft-gegner-formieren-sich-auf-facebook.php">Atomkraft-Gegner formieren sich auf Facebook</a> 
+								<a href="http://futurezone.at/netzpolitik/" class="ressort">Netzpolitik</a> <a class="link" href="http://futurezone.at/netzpolitik/2224-atomkraft-gegner-formieren-sich-auf-facebook.php">Atomkraft-Gegner formieren sich auf Facebook</a>
 								<a href="http://futurezone.at/netzpolitik/2224-atomkraft-gegner-formieren-sich-auf-facebook.php" class="comments">12</a>
 			</li>
 					<li class="produkte">
 				<span>4.</span>
-								<a href="http://futurezone.at/produkte/" class="ressort">Produkte</a> <a class="link" href="http://futurezone.at/produkte/2239-internet-explorer-wird-konkurrenzfaehig.php">Internet Explorer wird konkurrenzfähig</a> 
+								<a href="http://futurezone.at/produkte/" class="ressort">Produkte</a> <a class="link" href="http://futurezone.at/produkte/2239-internet-explorer-wird-konkurrenzfaehig.php">Internet Explorer wird konkurrenzfähig</a>
 								<a href="http://futurezone.at/produkte/2239-internet-explorer-wird-konkurrenzfaehig.php" class="comments">11</a>
 			</li>
 			</ul>
@@ -551,9 +551,9 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 <iframe title="Webtermine" width="375" height="330" src="{{MEDIA_URL}}futurezone.at_files/saved_resource.html" frameborder="0" style="margin:0px;padding:0px;" allowfullscreen=""></iframe>
 </div>		</div>
 		<!-- Ende Sidebar -->
-		
+
 		<br class="clear">
-		
+
 		<!-- Footer -->
 <div id="footer">
 	<ul>
@@ -569,4 +569,4 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 </div>
 <!-- Ende Footer -->
 	</div>
-{% endblock main_content %}	
+{% endblock main_content %}
