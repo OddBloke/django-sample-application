@@ -1,0 +1,13 @@
+{% extends 'benchmark_app/base.html' %}
+{% block main_content %}
+<div class="wrapper">
+    <br/><br/><br/>
+    <h1>Newest articles</h1>
+    <ul>
+    {% for article in articles %}
+        {% include 'benchmark_app/_list_item_article.html' %}
+    {% endfor %}
+    </ul>
+</div>
+{% endblock main_content %}
+
