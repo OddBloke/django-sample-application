@@ -6,6 +6,7 @@ from django.conf import settings
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.db.models import Count, Max, Min, Sum
 
 from benchmark_app.models import Article
 from benchmark_app.models import Tag
@@ -44,6 +45,16 @@ def home(request):
                 )
                 a.save()
 
+                # add random tags to article
+                amount = random.randint(10, 30)
+                for i in range(amount):
+                    index = random.randint(0, Tag.objects.all().count()-1)
+                    tag = Tag.objects.all()[index]
+                    a.tags.add(tag)
+
+                a.save()
+
+
     return render_to_response('benchmark_app/home.html', {},
                               context_instance=RequestContext(request))
 
@@ -54,7 +65,21 @@ def static(request):
 
 
 def simple_db_query(request):
-    return render_to_response('benchmark_app/home.html', {},
+    """
+    Simple DB Query
+
+    Render a list of the 30 newest articles
+    """
+    articles = Article.objects.all().order_by('-created')
+
+    if articles.count() > 30:
+        articles = articles[0:30]
+
+    context = {
+        'articles': articles,
+    }
+
+    return render_to_response('benchmark_app/simple.html', context,
                               context_instance=RequestContext(request))
 
 
@@ -64,7 +89,25 @@ def sequential_db_query(request):
 
 
 def complex_db_query(request):
-    return render_to_response('benchmark_app/home.html', {},
+    """
+    Complex DB Query
+
+    Render a list of the 30 most used tags that contain 'zz'
+    """
+
+    tags = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .filter(name__contains='zz') \
+              .order_by('-num_of_articles')
+
+    if tags.count() > 30:
+        tags = tags[0:30]
+
+    context = {
+        'tags': tags
+    }
+
+    return render_to_response('benchmark_app/complex.html', context,
                               context_instance=RequestContext(request))
 
 
