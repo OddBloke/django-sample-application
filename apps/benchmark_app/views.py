@@ -215,6 +215,7 @@ def upload(request):
     """
     Takes a image as post parameter and stores it.
     """
+    msg = ''
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
@@ -222,11 +223,13 @@ def upload(request):
             for chunk in request.FILES['file'].chunks():
                 destination.write(chunk)
             destination.close()
+            msg = 'File uploaded successful.'
     else:
         form = UploadFileForm()
 
     context = {
         'form': form,
+        'msg': msg,
     }
 
     return render_to_response('benchmark_app/upload.html', context,
