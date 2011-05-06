@@ -83,7 +83,33 @@ def simple_db_query(request):
                               context_instance=RequestContext(request))
 
 
+def complex_db_query(request):
+    """
+    Complex DB Query
+
+    Render a list of the 30 most used tags that contain 'zz'
+    """
+
+    tags = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .filter(name__contains='zz') \
+              .order_by('-num_of_articles')
+
+    if tags.count() > 30:
+        tags = tags[0:30]
+
+    context = {
+        'tags': tags
+    }
+
+    return render_to_response('benchmark_app/complex.html', context,
+                              context_instance=RequestContext(request))
+
+
 def sequential_db_query(request):
+    """
+    Runs a few of the complex queries in a row and displays the output
+    """
     tags1 = Tag.objects.select_related() \
               .annotate(num_of_articles=Count('articles')) \
               .filter(name__contains='zz') \
@@ -141,30 +167,10 @@ def sequential_db_query(request):
                               context_instance=RequestContext(request))
 
 
-def complex_db_query(request):
-    """
-    Complex DB Query
-
-    Render a list of the 30 most used tags that contain 'zz'
-    """
-
-    tags = Tag.objects.select_related() \
-              .annotate(num_of_articles=Count('articles')) \
-              .filter(name__contains='zz') \
-              .order_by('-num_of_articles')
-
-    if tags.count() > 30:
-        tags = tags[0:30]
-
-    context = {
-        'tags': tags
-    }
-
-    return render_to_response('benchmark_app/complex.html', context,
-                              context_instance=RequestContext(request))
-
-
 def db_write(request):
+    """
+    Adds a new random article to our database
+    """
     amount = random.randint(0,6)
 
     str_list = []
@@ -201,8 +207,29 @@ def db_write(request):
                               context_instance=RequestContext(request))
 
 
+from benchmark_app.forms import UploadFileForm
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
 def upload(request):
-    return render_to_response('benchmark_app/home.html', {},
+    """
+    Takes a image as post parameter and stores it.
+    """
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            destination = open('somefile.dat', 'wb+')
+            for chunk in request.FILES['file'].chunks():
+                destination.write(chunk)
+            destination.close()
+    else:
+        form = UploadFileForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render_to_response('benchmark_app/upload.html', context,
                               context_instance=RequestContext(request))
 
 
