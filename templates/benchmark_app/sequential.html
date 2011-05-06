@@ -1,0 +1,48 @@
+{% extends 'benchmark_app/base.html' %}
+{% block main_content %}
+<div class="wrapper">
+    <br/><br/><br/>
+    <h1>Newest articles</h1>
+    <ul>
+    {% for article in articles %}
+        {% include 'benchmark_app/_list_item_article.html' %}
+    {% endfor %}
+    </ul>
+    <br/><br/><br/>
+    <h1>Tags 1</h1>
+    <ul>
+    {% for tag in tags1 %}
+        {% include 'benchmark_app/_list_item_tag.html' %}
+    {% endfor %}
+    </ul>
+    <br/><br/><br/>
+    <h1>Tags 2</h1>
+    <ul>
+    {% for tag in tags2 %}
+        {% include 'benchmark_app/_list_item_tag.html' %}
+    {% endfor %}
+    </ul>
+    <br/><br/><br/>
+    <h1>Tags 3</h1>
+    <ul>
+    {% for tag in tags3 %}
+        {% include 'benchmark_app/_list_item_tag.html' %}
+    {% endfor %}
+    </ul>
+    <br/><br/><br/>
+    <h1>Tags 4</h1>
+    <ul>
+    {% for tag in tags4 %}
+        {% include 'benchmark_app/_list_item_tag.html' %}
+    {% endfor %}
+    </ul>
+    <br/><br/><br/>
+    <h1>Tags 5</h1>
+    <ul>
+    {% for tag in tags5 %}
+        {% include 'benchmark_app/_list_item_tag.html' %}
+    {% endfor %}
+    </ul>
+</div>
+{% endblock main_content %}
+

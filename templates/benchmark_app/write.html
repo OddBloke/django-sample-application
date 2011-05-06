@@ -1,0 +1,11 @@
+{% extends 'benchmark_app/base.html' %}
+{% block main_content %}
+<div class="wrapper">
+    <br/><br/><br/>
+    <h1>Added new article (overall count: {{count}})</h1>
+    <ul>
+    {% include 'benchmark_app/_list_item_article.html' %}
+    </ul>
+</div>
+{% endblock main_content %}
+

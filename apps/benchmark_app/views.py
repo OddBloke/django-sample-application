@@ -84,7 +84,60 @@ def simple_db_query(request):
 
 
 def sequential_db_query(request):
-    return render_to_response('benchmark_app/home.html', {},
+    tags1 = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .filter(name__contains='zz') \
+              .order_by('-num_of_articles')
+
+    if tags1.count() > 30:
+        tags1 = tags1[0:30]
+
+    tags2 = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .order_by('num_of_articles')
+
+    if tags2.count() > 30:
+        tags2 = tags2[0:30]
+
+    tags3 = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .order_by('-num_of_articles')
+
+    if tags3.count() > 30:
+        tags3 = tags3[0:30]
+
+    tags4 = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .filter(name__contains='a') \
+              .order_by('-name', 'created')
+
+    if tags4.count() > 30:
+        tags4 = tags4[0:30]
+
+    tags5 = Tag.objects.select_related() \
+              .annotate(num_of_articles=Count('articles')) \
+              .filter(name__contains='zz') \
+              .order_by('-created', 'name')
+
+    if tags5.count() > 30:
+        tags5 = tags5[0:30]
+
+    articles = Article.objects.all().order_by('-created')
+
+    if articles.count() > 30:
+        articles = articles[0:30]
+
+
+    context = {
+        'tags1': tags1,
+        'tags2': tags2,
+        'tags3': tags3,
+        'tags4': tags4,
+        'tags5': tags5,
+        'articles': articles,
+    }
+
+    return render_to_response('benchmark_app/sequential.html', context,
                               context_instance=RequestContext(request))
 
 
@@ -112,7 +165,39 @@ def complex_db_query(request):
 
 
 def db_write(request):
-    return render_to_response('benchmark_app/home.html', {},
+    amount = random.randint(0,6)
+
+    str_list = []
+    txt = ''
+    while txt == '':
+        index = random.randint(0, len(settings.TEST_DATA)-1)
+        for i in range(amount):
+            str_list.append(settings.TEST_DATA[index])
+        txt = " ".join(str_list)
+
+    a = None
+    if txt != '':
+        a = Article(
+            title=txt[0:((index+1)*amount)],
+            text=txt,
+        )
+        a.save()
+
+        # add random tags to article
+        amount = random.randint(10, 30)
+        for i in range(amount):
+            index = random.randint(0, Tag.objects.all().count()-1)
+            tag = Tag.objects.all()[index]
+            a.tags.add(tag)
+
+        a.save()
+
+    context = {
+        'article': a,
+        'count': Article.objects.all().count(),
+    }
+
+    return render_to_response('benchmark_app/write.html', context,
                               context_instance=RequestContext(request))
 
 
