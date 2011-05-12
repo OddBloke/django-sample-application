@@ -7,10 +7,12 @@ from django.conf import settings
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.db.models import Count, Max, Min, Sum
+from django.db import transaction
 
 from benchmark_app.models import Article
 from benchmark_app.models import Tag
 
+@transaction.commit_manually
 def home(request):
     if Article.objects.all().count() == 0:
         # extract all tags from test_data
@@ -26,7 +28,9 @@ def home(request):
             try:
                 t.save()
             except:
-                pass
+                transaction.rollback()
+            else:
+                transaction.commit()
 
         # populate database with sample articles
         for i in range(1000):
@@ -43,7 +47,14 @@ def home(request):
                     title=txt[0:((index+1)*amount)],
                     text=txt,
                 )
-                a.save()
+
+                try:
+                    a.save()
+                except:
+                    transaction.rollback()
+                else:
+                    transaction.commit()
+
 
                 # add random tags to article
                 amount = random.randint(10, 30)
@@ -52,7 +63,12 @@ def home(request):
                     tag = Tag.objects.all()[index]
                     a.tags.add(tag)
 
-                a.save()
+                try:
+                    a.save()
+                except:
+                    transaction.rollback()
+                else:
+                    transaction.commit()
 
 
     return render_to_response('benchmark_app/home.html', {},
